@@ -12,9 +12,69 @@ while (not outputBase in "012345678910111213141516") or (int(outputBase) > 17 or
     print("Must be a number from 1-16")
     outputBase = input("Enter a output base (1-16): ")
 
+inputBase = int(inputBase)
 
 s = input("Enter a input number: ")
-inputBase = int(inputBase)
+
+# More error checking on the value to convert
+if int(inputBase) <= 10:
+    while (not s in "0123456789") or (int(s) > inputBase - 1 or int(s) < 0):
+        s = input("Bad input, try again: ")
+elif int(inputBase == 11):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "BCDEFGHIJKLMNOPQRSTUVWXYZbcdefghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+elif int(inputBase == 12):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "CDEFGHIJKLMNOPQRSTUVWXYZcdefghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+elif int(inputBase == 13):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "DEFGHIJKLMNOPQRSTUVWXYZdefghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+elif int(inputBase == 14):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "EFGHIJKLMNOPQRSTUVWXYZefghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+elif int(inputBase == 15):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "FGHIJKLMNOPQRSTUVWXYZfghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+elif int(inputBase == 16):
+    checkInput = True
+    while checkInput:
+        for x in s:
+            if x in "GHIJKLMNOPQRSTUVWXYZghijklmnopqrstuvwxyz":
+                s = input("Bad input, try again: ")
+                break
+        else:
+            checkInput = False
+
 outputBase = int(outputBase)
 decimalNum = 0
 exp = len(s) - 1
